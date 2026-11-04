@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demander un devis | Yeee traiteur</title>
+  <meta name="description" content="Demandez gratuitement votre devis Yeee pour un buffet ou une livraison de repas pour votre séminaire ou réunion.">
+  <meta name="theme-color" content="#FAF7F0">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="entete">
+    <div class="conteneur">
+      <a class="logo" href="index.html" aria-label="Yeee, retour à l'accueil">Yeee</a>
+      <button class="bouton-menu" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="barres"><span></span></span> Menu
+      </button>
+      <nav class="menu" id="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="prestations.html">Nos prestations</a></li>
+          <li><a href="comment-ca-marche.html">Comment ça marche</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="bouton" href="devis.html">Demander un devis</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="tete-page">
+      <div class="conteneur">
+        <span class="surtitre">Demander un devis</span>
+        <h1>Parlez-nous de votre événement</h1>
+        <hr class="filet">
+        <p class="intro">Quelques informations suffisent. Nous vous répondons avec une proposition adaptée. La demande est gratuite et sans engagement.</p>
+      </div>
+    </section>
+
+    <section style="padding-top:8px">
+      <div class="conteneur">
+        <form class="formulaire" id="form-devis" novalidate>
+          <div class="champ">
+            <label for="nom">Nom et prénom *</label>
+            <input id="nom" name="nom" type="text" autocomplete="name" required>
+          </div>
+          <div class="champ">
+            <label for="entreprise">Entreprise *</label>
+            <input id="entreprise" name="entreprise" type="text" autocomplete="organization" required>
+          </div>
+          <div class="champ">
+            <label for="email">E-mail * <span class="aide">(pour vous répondre)</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
+          </div>
+          <div class="champ">
+            <label for="telephone">Téléphone <span class="aide">(facultatif)</span></label>
+            <input id="telephone" name="telephone" type="tel" autocomplete="tel" inputmode="tel">
+          </div>
+          <div class="champ">
+            <label for="date">Date de l'événement *</label>
+            <input id="date" name="date" type="date" required>
+          </div>
+          <div class="champ">
+            <label for="personnes">Nombre de personnes *</label>
+            <input id="personnes" name="personnes" type="number" min="1" step="1" inputmode="numeric" required>
+          </div>
+          <div class="champ plein">
+            <label for="prestation">Type de prestation *</label>
+            <select id="prestation" name="prestation" required>
+              <option value="">Choisissez…</option>
+              <option>Buffet</option>
+              <option>Livraison de repas (séminaire, réunion)</option>
+              <option>Je ne sais pas encore</option>
+            </select>
+          </div>
+          <div class="champ plein">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" placeholder="Lieu, horaires, régimes alimentaires, budget indicatif, vos envies…"></textarea>
+          </div>
+          <input type="checkbox" name="botcheck" class="cache" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="case plein">
+            <input type="checkbox" name="accord" required>
+            <span>J'accepte que mes informations soient utilisées pour répondre à ma demande de devis. Voir les <a href="mentions-legales.html#donnees">mentions légales</a>.</span>
+          </label>
+          <div class="plein">
+            <button class="bouton" type="submit" style="width:100%">Envoyer ma demande</button>
+          </div>
+          <div class="message-envoi plein" id="message-envoi" role="status" tabindex="-1"></div>
+          <p class="plein" style="margin:0;font-size:.85rem;color:var(--encre-doux)">* Champs obligatoires</p>
+        </form>
+
+        <div class="carte" style="margin-top:24px;text-align:center">
+          <h3>Vous préférez écrire directement ?</h3>
+          <p>Envoyez-nous un e-mail avec les mêmes informations.</p>
+          <a class="bouton secondaire" href="#" data-email-lien>Nous écrire par e-mail</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur">
+      <div class="grille">
+        <div>
+          <a class="logo" href="index.html">Yeee</a>
+          <p style="margin-top:12px">Traiteur pour entreprises : buffets et repas livrés pour vos séminaires et réunions.</p>
+        </div>
+        <div>
+          <h3>Le site</h3>
+          <ul>
+            <li><a href="prestations.html">Nos prestations</a></li>
+            <li><a href="comment-ca-marche.html">Comment ça marche</a></li>
+            <li><a href="devis.html">Demander un devis</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Nous écrire</h3>
+          <ul>
+            <li><a href="#" data-email-lien><span class="a-completer" data-email-texte>[À COMPLÉTER : adresse e-mail]</span></a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="bas">© <span data-annee>2026</span> Yeee · Micro-entreprise · TVA non applicable, art. 293 B du CGI</p>
+    </div>
+  </footer>
+  <script src="assets/script.js"></script>
+</body>
+</html>
