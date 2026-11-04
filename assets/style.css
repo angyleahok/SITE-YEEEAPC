@@ -107,21 +107,26 @@ p  { margin: 0 0 1em; }
   font-size: .95em;
 }
 
-/* ---------- Logo ---------- */
-.logo {
-  font-family: var(--titre);
-  font-weight: 600;
-  font-size: 2.1rem;
-  line-height: 1;
-  letter-spacing: .02em;
-  text-decoration: none;
-  background: linear-gradient(135deg, #8C6420 0%, #C99A3E 45%, #E2BE6E 60%, #A87728 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: var(--or);
-  -webkit-text-fill-color: transparent;
+/* ---------- Logo ----------
+   Le fichier logo-yeee.png est utilisé tel quel (non modifié).
+   Il contient une grande marge transparente : le cadre ci-dessous
+   n'affiche que la zone du mot « Yeee » (rognage à l'affichage seulement). */
+.logo { display: inline-block; line-height: 0; text-decoration: none; }
+.logo-cadre {
+  display: block;
+  width: 96px;
+  aspect-ratio: 2105 / 990;
+  overflow: hidden;
 }
-.logo:hover { color: var(--or); }
+.logo-cadre img {
+  max-width: none;
+  width: 166.65%;          /* 3508 / 2105 */
+  height: auto;
+  margin-left: -35.68%;    /* 751 / 2105 */
+  margin-top: -34.01%;     /* 716 / 2105 */
+}
+.logo-pied .logo-cadre { width: 110px; }
+@media (min-width: 900px) { .entete .logo-cadre { width: 108px; } }
 
 /* ---------- En-tête et menu ---------- */
 .entete {

@@ -5,6 +5,7 @@ Site statique (HTML/CSS + un petit JavaScript), publié avec GitHub Pages.
 ## Ce qu'il faut compléter
 - Chercher `[À COMPLÉTER]` dans les fichiers `.html` : chaque zone rouge sur le site est une info manquante.
 - `assets/script.js`, tout en haut : votre adresse e-mail (`EMAIL_CONTACT`) et la clé Web3Forms (`CLE_WEB3FORMS`).
+- Logo : `assets/logo-yeee.png` (fichier original, non modifié).
 - Photos : remplacer chaque `<div class="photo">…</div>` par `<div class="photo"><img src="assets/photos/nom.jpg" alt="description"></div>`.
 
 ## Fichiers
